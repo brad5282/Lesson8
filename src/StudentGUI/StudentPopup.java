@@ -11,6 +11,20 @@ public class StudentPopup extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
     }
+    
+    public void setForm(Student s){
+        //put student name in box
+        txtname.setText(s.getName());
+        //put marks into boxes
+        for (int i = 0; i < 3; i++) {
+            tblmarks.setValueAt(s.getMark(i+1),0,i);
+            
+        }
+    }
+    
+    public Student getStudent(){
+        return temp;
+    } 
 
 
     @SuppressWarnings("unchecked")
